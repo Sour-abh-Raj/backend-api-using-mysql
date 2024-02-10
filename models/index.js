@@ -5,6 +5,10 @@ const news = require("./news");
 const subCategory = require("./subCategory");
 const subscription = require("./subscription");
 const writerDetail = require("./writerDetail");
+const mostViews = require("./mostViews");
+const reviews = require("./reviews");
+const trending = require("./trending");
+const settings = require("./settings");
 
 writerDetail.hasMany(blog, {
   foreignKey: "writer_id",
@@ -54,4 +58,8 @@ module.exports = {
   subCategory,
   subscription,
   writerDetail,
+  mostViews,
+  reviews,
+  trending,
+  settings,
 };

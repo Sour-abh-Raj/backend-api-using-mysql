@@ -5,6 +5,10 @@ const seedNews = require("./news-seeds");
 const seedCategories = require("./category-seeds");
 const seedBlogs = require("./blog-seeds");
 const seedAdmin = require("./admin-seeds");
+const seedMostViews = require("./most-views-seeds");
+const seedReviews = require("./reviews-seeds");
+const seedSettings = require("./settings-seeds");
+const seedTrending = require("./trending-seeds");
 
 const sequelize = require("../config/connection");
 
@@ -28,6 +32,18 @@ const seedAll = async () => {
 
   await seedBlogs();
   console.log("\n----- BLOGS SEEDED -----\n");
+
+  await seedMostViews();
+  console.log("\n----- MOST VIEWS SEEDED -----\n");
+
+  await seedReviews();
+  console.log("\n----- REVIEWS SEEDED -----\n");
+
+  await seedSettings();
+  console.log("\n----- SETTINGS SEEDED -----\n");
+
+  await seedTrending();
+  console.log("\n----- TRENDING SEEDED -----\n");
 
   await seedAdmin();
   console.log("\n----- ADMINS SEEDED -----\n");
